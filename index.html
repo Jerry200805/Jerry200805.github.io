@@ -2,40 +2,42 @@
 <html lang="zh">
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>作业家JerryPage</title>
     <link href="main.css" rel="stylesheet">
   </head>
-<ons-page ng-controller="JerryPageController as main">
+<ons-page ng-controller="helpcenterController as main">
     <ons-toolbar fixed-style>
         <div style="border-right: 0px;" class="left flexCenter flexColumnContainer tappable"
              ng-click="main.backClicked()">
             <img src="assets/img/left.png">
         </div>
         <div class="center">
-            Jerry's Page
+            Jerry's Page,欢迎，{{main.username}}
         </div>
     </ons-toolbar>
     <div class="whiteBackground biggerFont" style="height: 100%;">
         <div style="margin-bottom: 1.8rem;">
-            <span class='elllipsis2line' style='font-size: 3rem; font-weight: 600;'>当前的主程序版本：{{main.version}}</span>
+            <span class='elllipsis2line' style='font-size: 2rem; font-weight: 300;'>当前的主程序版本：{{main.version}}</span>
         </div>
         <body>
             {{main.appsionMessage}}
         </body>
         <div style="margin-bottom: 1.8rem;">
-            <span class='elllipsis2line' style='font-size: 3rem; font-weight: 600;'>当前的Dist文档版本：{{main.Distversion}}</span>
+            <span class='elllipsis2line' style='font-size: 2rem; font-weight: 300;'>当前的Dist文档版本：{{main.Distversion}}</span>
         </div>
         <body>
             {{main.DistappsionMessage}}
         </body>
         <div style="margin-bottom: 1.8rem;">
-            <span class='elllipsis2line' style='font-size: 3rem; font-weight: 600;'>当前的主程序最新版本：6.6.4.0</span>
-            <span class='elllipsis2line' style='font-size: 3rem; font-weight: 600;'>当前的Dist文档最新版本：20230130</span>
+            <span class='elllipsis2line' style='font-size: 2rem; font-weight: 300;'>当前的主程序最新版本：6.6.4.0</span>
+            <span class='elllipsis2line' style='font-size: 2rem; font-weight: 300;'>当前的Dist文档最新版本：20230130</span>
         </div>
         <body>
-            请检查是否为最新版，联系作者邮箱：Doc@l6wy.onmicrosoft.com
+            请检查是否为最新版，联系作者邮箱：Doc@l6wy.onmicrosoft.com，祝您生活愉快！
+        </body>
+        <body>
+            "基本信息：",
+            devicetype={{main.devicetype}},userid={{main.userid}},banji={{main.banji}},school:{{main.school}},codever={{main.codever}},Distver={{main.Distver}}
         </body>
     </div>
 </ons-page>
