@@ -36,8 +36,29 @@
             请检查是否为最新版，联系作者邮箱：Doc@l6wy.onmicrosoft.com，祝您生活愉快！
         </body>
         <body>
-            "基本信息：",
+            "基本信息：",'\n',
             devicetype={{main.devicetype}},userid={{main.userid}},banji={{main.banji}},school:{{main.school}},codever={{main.codever}},Distver={{main.Distver}}
         </body>
     </div>
+    <div class="full-screen noScroll whiteBackground flexColumnContainer">
+        <div class="settingItem">
+            <span class="settingLeftSpan">姓名</span>
+            <span class="settingRightSpan">{{main.user.name}}</span>
+        </div>
+        <div class="settingItem">
+            <span class="settingLeftSpan">账号</span>
+            <span class="settingRightSpan">{{main.user.user}}</span>
+        </div>
+        <div class="settingItem">
+            <span class="settingLeftSpan">学校</span>
+            <span class="settingRightSpan">{{main.schoolname}}</span>
+        </div>
+        <div class="settingItem">
+            <span class="settingLeftSpan">班级</span>
+            <span class="settingRightSpan">{{main.banji.allname}}</span>
+        </div>
+        <div class="settingItem" ng-click="main.getWifi()">
+            <span class="settingLeftSpan">网络信息</span>
+            <span class="settingRightSpan">{{main.wifi}}</span>
+        </div>
 </ons-page>
