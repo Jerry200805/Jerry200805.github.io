@@ -1,19 +1,17 @@
-<div id="my-info" class="whiteBackground biggerFont" style="height: 100%;" ng-controller="wodexinxiController as main">
-    <!--<ons-page>
+<ons-page>
+<div class="whiteBackground biggerFont" style="height: 100%;" ng-controller="JerryPageController as main">
         <ons-toolbar fixed-style>
             <div style="border-right: 0px;" class="left flexCenter flexColumnContainer tappable"
                 ng-click="main.backClicked()">
                 <img src="assets/img/left.png">
             </div>
             <div class="center">
-                Jerry's Page,欢迎，{{main.username}}
+                Jerry's Page，欢迎，{{main.user.name}}！
             </div>
         </ons-toolbar>
-    </ons-page>-->
     <div style="margin-bottom: 1.8rem;">
         <span class='elllipsis2line' style='font-size: 3rem; font-weight: 600;'>当前的主程序版本：{{main.version}}</span>
     </div>
-
     <body>
         {{main.appsionMessage}}
     </body>
@@ -49,11 +47,27 @@
         <span class="settingRightSpan">{{main.banji.allname}}</span>
     </div>
     <div class="settingItem">
+        <span class="settingLeftSpan">MacAddress</span>
+        <span class="settingRightSpan">{{main.macaddress}}</span>
+    </div>
+    <div class="settingItem">
+        <span class="settingLeftSpan">Serial Number</span>
+        <span class="settingRightSpan">{{main.sn}}</span>
+    </div>
+    <div class="settingItem">
         <span class="settingLeftSpan">DeviceType</span>
         <span class="settingRightSpan">{{main.devicetype}}</span>
+    </div>
+    <div class="settingItem" ng-click="main.pmClear()">
+        <span class="settingLeftSpan">pmClear</span>
+        <span class="settingRightSpan">强制清除数据</span>
     </div>
     <div class="settingItem" ng-click="main.getWifi()">
         <span class="settingLeftSpan">网络信息</span>
         <span class="settingRightSpan">{{main.wifi}}</span>
     </div>
+    <body>
+        s.isAndroid information ::  {{main.isAndroid}}
+    </body>
 </div>
+</ons-page>
