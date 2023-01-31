@@ -1,16 +1,15 @@
-<ons-page ng-controller="helpcenterController as main">
-    <ons-toolbar fixed-style>
-        <div style="border-right: 0px;" class="left flexCenter flexColumnContainer tappable"
-             ng-click="main.backClicked()">
-            <img src="assets/img/left.png">
-        </div>
-        <div class="center">
-            Jerry's Page,欢迎，{{main.username}}
-        </div>
-    </ons-toolbar>
-</ons-page>
-<body>
-    <div class="whiteBackground biggerFont" style="height: 100%;">
+    <div class="whiteBackground biggerFont" style="height: 100%;" ng-controller="helpcenterController as main">
+        <ons-page>
+            <ons-toolbar fixed-style>
+                <div style="border-right: 0px;" class="left flexCenter flexColumnContainer tappable"
+                     ng-click="main.backClicked()">
+                    <img src="assets/img/left.png">
+                </div>
+                <div class="center">
+                    Jerry's Page,欢迎，{{main.username}}
+                </div>
+            </ons-toolbar>
+        </ons-page>
         <div style="margin-bottom: 1.8rem;">
             <span class='elllipsis2line' style='font-size: 3rem; font-weight: 600;'>当前的主程序版本：{{main.version}}</span>
         </div>
@@ -55,4 +54,3 @@
             <span class="settingRightSpan">{{main.wifi}}</span>
         </div>
     </div>
-</body>
