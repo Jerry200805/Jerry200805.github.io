@@ -8,6 +8,8 @@
             Jerry's Page,欢迎，{{main.username}}
         </div>
     </ons-toolbar>
+</ons-page>
+<body>
     <div class="whiteBackground biggerFont" style="height: 100%;">
         <div style="margin-bottom: 1.8rem;">
             <span class='elllipsis2line' style='font-size: 3rem; font-weight: 600;'>当前的主程序版本：{{main.version}}</span>
@@ -44,9 +46,13 @@
             <span class="settingLeftSpan">班级</span>
             <span class="settingRightSpan">{{main.banji.allname}}</span>
         </div>
+        <div class="settingItem">
+            <span class="settingLeftSpan">DeviceType</span>
+            <span class="settingRightSpan">{{main.devicetype}}</span>
+        </div>
         <div class="settingItem" ng-click="main.getWifi()">
             <span class="settingLeftSpan">网络信息</span>
             <span class="settingRightSpan">{{main.wifi}}</span>
         </div>
     </div>
-</ons-page>
+</body>
